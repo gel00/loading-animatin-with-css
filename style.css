@@ -1,0 +1,78 @@
+body, html {
+	height: 100%;
+	background: #1c1c1c;
+	margin: 0;
+	padding: 10px;
+}
+
+#out {
+	box-sizing: border-box;
+	width: 300px;
+	height: 300px;
+	border: 5px solid #89BFFF;
+	border-radius: 50%;
+	position: relative;
+}
+
+#in {
+	box-sizing: border-box;
+	position: absolute;
+	top: -11px;
+	left: 145px;
+	transform: rotate(360deg);
+	width: 156px;
+	height: 156px;
+	background: #1c1c1c;
+	animation-name: loading;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;*/
+}
+
+@keyframes loading {
+	0% {
+		width: 156px;
+		height: 156px;
+		top: -11px;
+		left: 145px;
+		transform: rotate(0deg);
+	}
+	12% {
+		top: 67px;
+		left: 178px;
+		transform: rotate(45deg);
+	}
+	25% {
+		top: 145px;
+		left: 145px;
+		transform: rotate(90deg);
+
+	}
+	37% {
+		top: 178px;
+		left: 67px;
+		transform: rotate(135deg);
+	}
+	50% {
+		top: 145px;
+		left: -11px;
+		transform: rotate(180deg);
+	}
+	62% {
+		top: 67px;
+		left: -43px;
+		transform: rotate(225deg);
+	}
+	75% {
+		top: -11px;
+		left: -11px;
+		transform: rotate(270deg);
+	}
+	89% {
+		top: -42px;
+		left: 67px;
+		transform: rotate(315deg);
+		height: 156px;
+		width: 156px;
+	}
+}

@@ -27,10 +27,14 @@ body, html {
 	left: -6px;
 	width: 102px;
 	height: 102px;
+	-webkit-animation-name: rotate;
 	animation-name: rotate;
+	-webkit-animation-duration: 0.7s;
 	animation-duration: 0.7s;
+	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
-	animation-timing-function: linear;*/
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
 }
 
 .r1 {
@@ -41,10 +45,15 @@ body, html {
 	background: #1c1c1c;
 	width: 50%;
 	height: 50%;
+	-webkit-animation-name: pulseX;
 	animation-name: pulseX;
+	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
+	-webkit-animation-direction: alternate;
 	animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-out;
 	animation-timing-function: ease-out;
 }
 
@@ -56,11 +65,31 @@ body, html {
 	background: #1c1c1c;
 	width: 50%;
 	height: 50%;
+	-webkit-animation-name: pulseY;
 	animation-name: pulseY;
+	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
+	-webkit-animation-direction: alternate;
 	animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-out;
 	animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes pulseX {
+	0% {
+		width: 0%;
+		height: 0%;
+	}
+	50% {
+		width: 100%;
+		height: 50%;
+	}
+	100% {
+		width: 100%;
+		height: 100%;
+	}
 }
 
 @keyframes pulseX {
@@ -71,6 +100,21 @@ body, html {
 	50% {
 		width: 100%;
 		height: 50%;
+	}
+	100% {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@-webkit-keyframes pulseY {
+	0% {
+		width: 0%;
+		height: 0%;
+	}
+	50% {
+		width: 50%;
+		height: 100%;
 	}
 	100% {
 		width: 100%;
@@ -93,11 +137,24 @@ body, html {
 	}
 }
 
-@keyframes rotate {
+@-webkit-keyframes rotate {
 	0% {
+		-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);
 	}
 	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
 }
